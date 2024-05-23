@@ -1,23 +1,3 @@
-# -*- coding: utf-8 -*-
-# @Time   : 2020/8/31
-# @Author : Changxin Tian
-# @Email  : cx.tian@outlook.com
-
-# UPDATE:
-# @Time   : 2020/9/16, 2021/12/22
-# @Author : Shanlei Mu, Gaowei Zhang
-# @Email  : slmu@ruc.edu.cn, 1462034631@qq.com
-
-r"""
-LightGCN
-################################################
-
-Reference:
-    Xiangnan He et al. "LightGCN: Simplifying and Powering Graph Convolution Network for Recommendation." in SIGIR 2020.
-
-Reference code:
-    https://github.com/kuandeng/LightGCN
-"""
 import random
 import numpy as np
 import scipy.sparse as sp
@@ -31,15 +11,6 @@ from recbole.model.loss import BPRLoss, EmbLoss
 from recbole.utils import InputType
 
 class OCLMF(GeneralRecommender):
-    r"""LightGCN is a GCN-based recommender model.
-
-    LightGCN includes only the most essential component in GCN — neighborhood aggregation — for
-    collaborative filtering. Specifically, LightGCN learns user and item embeddings by linearly
-    propagating them on the user-item interaction graph, and uses the weighted sum of the embeddings
-    learned at all layers as the final embedding.
-
-    We implement the model following the original author with a pairwise training mode.
-    """
     input_type = InputType.PAIRWISE
 
     def __init__(self, config, dataset):

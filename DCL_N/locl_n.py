@@ -1,23 +1,4 @@
 # -*- coding: utf-8 -*-
-# @Time   : 2020/12/31
-# @Author : Zihan Lin
-# @Email  : zhlin@ruc.edu.cn
-
-r"""
-ENMF
-################################################
-Reference:
-    Chong Chen et al. "Efficient Neural Matrix Factorization without Sampling for Recommendation." in TOIS 2020.
-
-Reference code:
-    https://github.com/chenchongthu/ENMF
-"""
-
-# import torch
-# import torch.nn as nn
-# from recbole.model.init import xavier_normal_initialization
-# from recbole.utils import InputType
-# from recbole.model.abstract_recommender import GeneralRecommender
 import numpy as np
 import scipy.sparse as sp
 import torch
@@ -31,10 +12,6 @@ from recbole.utils import InputType
 from logging import getLogger
 
 class LOCL_N(GeneralRecommender):
-    r"""ENMF is an efficient non-sampling model for general recommendation.
-    In order to run non-sampling model, please set the neg_sampling parameter as None .
-
-    """
 
     input_type = InputType.PAIRWISE
 
