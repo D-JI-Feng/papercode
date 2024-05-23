@@ -1,0 +1,4 @@
+temp: 0.15
+cl_layer: 2
+cl_rate: 0.2
+eps: 0.005

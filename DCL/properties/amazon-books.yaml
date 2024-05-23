@@ -1,0 +1,14 @@
+load_col:
+  inter: [user_id, item_id, rating]
+
+user_inter_num_interval: "[15,inf)"
+item_inter_num_interval: "[15,inf)"
+val_interval:
+  rating: "[3,inf)"
+
+dataset_save_path: './saved/amazon-books-Dataset.pth'
+train_batch_size: 4096
+train_neg_sample_args:
+  sample_num: 10
+
+cl_rate: 0.3

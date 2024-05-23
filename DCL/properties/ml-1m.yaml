@@ -1,0 +1,18 @@
+load_col:
+  inter: [user_id, item_id, rating]
+
+user_inter_num_interval: "[0,inf)"
+item_inter_num_interval: "[0,inf)"
+val_interval:
+  rating: "[3,inf)"
+
+dataset_save_path: './saved/ml-1m-Dataset.pth'
+
+train_batch_size: 1024
+train_neg_sample_args:
+  sample_num: 10
+
+cl_rate: 0.06
+temp: 0.17
+eps: 0.22
+tau: 0.2
